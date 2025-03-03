@@ -24,6 +24,10 @@ resource aksCluster 'Microsoft.ContainerService/managedClusters@2022-04-01' = {
   name: aksClusterName
   location: location
   tags: tags
+  sku: {  
+    name: 'Basic' // Adjust SKU as per your requirements  
+    tier: 'Premium'  // Adjust tier as per your requirements  
+  }
   identity: {
     type: 'SystemAssigned'
   }
