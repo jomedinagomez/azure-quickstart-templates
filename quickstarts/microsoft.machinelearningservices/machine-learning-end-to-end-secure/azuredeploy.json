@@ -1909,14 +1909,14 @@
                               "identity": {
                                 "type": "SystemAssigned"
                               },
+                              "sku": {  
+                                "name": "Basic",
+                                "tier": "Premium"  
+                              }, 
                               "properties": {
                                 "kubernetesVersion": "1.27.1",
                                 "dnsPrefix": "[format('{0}-dns', parameters('aksClusterName'))]",
-                                "supportPlan":"AKSLongTermSupport",
-                                "sku": {  
-                                  "name": "Basic",
-                                  "tier": "Premium"  
-                                },  
+                                "supportPlan":"AKSLongTermSupport", 
                                 "agentPoolProfiles": [
                                   {
                                     "name": "[toLower('agentpool')]",
