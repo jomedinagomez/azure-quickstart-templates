@@ -25,16 +25,16 @@ resource aksCluster 'Microsoft.ContainerService/managedClusters@2024-10-01' = {
   location: location
   supportPlan: 'AKSLongTermSupport'
   tags: tags
-  sku: {  
-    name: 'Basic' // Adjust SKU as per your requirements  
-    tier: 'Premium'  // Adjust tier as per your requirements  
-  }
   identity: {
     type: 'SystemAssigned'
   }
   properties: {
     kubernetesVersion: '1.27.1'
     dnsPrefix: '${aksClusterName}-dns'
+    sku: {  
+      name: 'Basic' // Adjust SKU as per your requirements  
+      tier: 'Premium'  // Adjust tier as per your requirements  
+    }
     agentPoolProfiles: [
       {
         name: toLower('agentpool')
