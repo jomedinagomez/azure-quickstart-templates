@@ -1906,7 +1906,7 @@
                               "name": "[parameters('aksClusterName')]",
                               "location": "[parameters('location')]",
                               "tags": "[parameters('tags')]",
-                              "supportPlan":"AKSLongTermSupport"
+                              "supportPlan":"AKSLongTermSupport",
                               "sku": {  
                                 "name": "Basic",
                                 "tier": "Premium"  
