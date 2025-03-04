@@ -1906,10 +1906,6 @@
                               "name": "[parameters('aksClusterName')]",
                               "location": "[parameters('location')]",
                               "tags": "[parameters('tags')]",
-                              "sku": {  
-                                "name": "Basic",
-                                "tier": "Premium"  
-                              },  
                               "identity": {
                                 "type": "SystemAssigned"
                               },
@@ -1917,6 +1913,10 @@
                                 "kubernetesVersion": "1.27.1",
                                 "dnsPrefix": "[format('{0}-dns', parameters('aksClusterName'))]",
                                 "supportPlan":"AKSLongTermSupport",
+                                "sku": {  
+                                  "name": "Basic",
+                                  "tier": "Premium"  
+                                },  
                                 "agentPoolProfiles": [
                                   {
                                     "name": "[toLower('agentpool')]",
