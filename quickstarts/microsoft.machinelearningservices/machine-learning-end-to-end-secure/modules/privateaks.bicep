@@ -23,6 +23,7 @@ param vmSizeParam string // = 'Standard_DS2_v2'
 resource aksCluster 'Microsoft.ContainerService/managedClusters@2024-10-01' = {
   name: aksClusterName
   location: location
+  supportPlan: 'AKSLongTermSupport'
   tags: tags
   sku: {  
     name: 'Basic' // Adjust SKU as per your requirements  
